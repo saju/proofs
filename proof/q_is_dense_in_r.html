@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <script>
+      MathJax.Hub.Config({
+	  jax: ["input/TeX","output/HTML-CSS"],
+	  displayAlign: "left"
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      window.MathJax = {
+	  tex: {
+	      inlineMath: [['$', '$'], ['\\(', '\\)']]
+	  }
+      };
+    </script>
+  </head>
+  <body>
+    <p>
+      <b>Statement:</b> Prove that $\mathbb{Q}$ is dense in $\mathbb{R}$
+    </p>
+    <p>
+      <b>Proof:</b> To prove $\mathbb{Q}$ is dense in $\mathbb{R}$, it will suffice to show that for any $r_1,r_2 \in \mathbb{R}$, $r_2 \gt r_1 => \exists$ $q \in \mathbb{Q}$ such that $r_1 \lt q \lt r_2$. i.e We can always find a rational between any two reals.
+    </p>
+
+    <p>
+      If $r_1 \lt 0 \lt r_2$, we have our proof because $0 \in Q$. On the other hand if $r_1 \lt r_2 \lt 0$, this is same as the case $-r_1 \gt -r_2$, therefore without loss of generality, we can only need to solve the condition where $0 \lt r_1 \lt r2$.
+    </p>
+    <p>
+      Since $\mathbb{R}$ is an ordered field and $r_2 - r_1 \gt 0$, the <b>Archimedean Property</b> (proved below) tells us $\exists$ $n \in \mathbb{N}$ where $n(r_2 - r_1) \gt 1$. Now consider the set $S = \{s \in \mathbb{N_o} : s \leq nr_1\}$, clearly $S \subset \mathbb{N_o}$, therefore $S \subset \mathbb{R}$ and therefore by definition $S$ has a supremum $\sup(S) \in S$, and is bounded by $nr_1$ so that $\sup(S) \lt nr_1$. Therefore $\sup(S) + 1 \gt nr_1$.
+    </p>
+    <p>
+      We also have (by definition) $\sup(S) \lt nr_1$, therefore $\sup(S) \lt nr_1 + 1$, therefore we have $nr_1 \lt \sup(S) \lt nr_2$; set $\sup(S) = m$, which leads us to the statement we seek: $r_1 \lt \frac{m}{n} \lt r_2$; since $m,n \in \mathbb{N}$, $\frac{m}{n} \in \mathbb{Q}$
+    </p>
+
+    <b>Proof of Archimedian Property for $\mathbb{R}$</b>
+    <p>
+      <b>(Generic) Statement:</b> An ordered field $F$ has the Archimedian Property if for $x, y \in \mathbb{F}$, $\exists$ $n \in \mathbb{N}$ where $nx \gt y$
+    </p>
+    <p>
+      <b>Proof (for $\mathbb{R}$):</b> $nx \gt y$ is same as $n \gt \frac{y}{x}$. Assume this statement is false and no such $n$ exists. This is same as saying $\frac{y}{x}$ is the $\sup(\mathbb{N})$. Let $M$ be the maximal element of $\mathbb{N}$ bounded by $\frac{y}{x}$, clearly $M \lt \frac{y}{x}$ and by definition $M + 1 \gt \frac{y}{x}$. We found an integer $M+1$ that is bigger than our supposed $\sup(\mathbb{N})$ that satisfies the property $(M+1)x \gt y$.
+    </p>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

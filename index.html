@@ -1,7 +1,20 @@
 <html>
-  <head>
+   <head>
+    <script>
+      MathJax.Hub.Config({
+	  jax: ["input/TeX","output/HTML-CSS"],
+	  displayAlign: "left"
+      });
+    </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      window.MathJax = {
+	  tex: {
+	      inlineMath: [['$', '$'], ['\\(', '\\)']]
+	  }
+      };
+    </script>
   </head>
   <body>
     <p>
@@ -10,6 +23,7 @@
     <ol>
       <li> <a href="proof/bezout.html">Proof of Bezout's identity</a></li>
       <li> <a href="proof/fermat_little.html">Proof of Fermat's Little Theorem</a></li>
+      <li> <a href="proof/q_is_dense_in_r.html">Proof of $\mathbb{Q}$ dense in $\mathbb{R}$</a></li>
     </ol>
   </body>
 </html>
